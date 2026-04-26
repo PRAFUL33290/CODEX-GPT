@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparatif Codex — Go vs Plus vs Pro</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#121a33;
+      --text:#eaf0ff;
+      --muted:#a9b6d3;
+      --accent:#5aa9ff;
+      --ok:#2ecc71;
+      --warn:#f1c40f;
+      --bad:#ff6b6b;
+      --border:#26345f;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,#080c1a 0%,#0e1530 100%);
+      color:var(--text);
+      line-height:1.5;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:32px 20px 48px}
+    h1{font-size:clamp(1.7rem,3vw,2.5rem);margin:0 0 8px}
+    .subtitle{color:var(--muted);margin:0 0 28px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;
+      margin:22px 0 30px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 8px 26px rgba(0,0,0,.28);
+    }
+    .plan{
+      display:flex;align-items:center;justify-content:space-between;
+      margin-bottom:8px;
+    }
+    .plan h2{margin:0;font-size:1.2rem}
+    .badge{
+      font-size:.78rem;
+      border:1px solid var(--border);
+      color:var(--accent);
+      padding:2px 8px;border-radius:999px;
+      background:rgba(90,169,255,.12)
+    }
+    ul{margin:10px 0 0 18px;padding:0}
+    li{margin:7px 0;color:#d6e0fa}
+    .kpi{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .pill{
+      font-size:.8rem;padding:4px 8px;border-radius:999px;border:1px solid var(--border)
+    }
+    .ok{color:var(--ok);background:rgba(46,204,113,.12)}
+    .warn{color:var(--warn);background:rgba(241,196,15,.12)}
+    .bad{color:var(--bad);background:rgba(255,107,107,.12)}
+    .section{
+      background:rgba(18,26,51,.75);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px;
+      margin-top:16px;
+    }
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:10px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+    th{color:#c5d3f5;font-weight:600}
+    .note{color:var(--muted);font-size:.94rem}
+    .footer{margin-top:18px;color:var(--muted);font-size:.9rem}
+    strong{color:#fff}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Différences Codex selon l’abonnement : Go, Plus, Pro</h1>
+    <p class="subtitle">
+      Comparatif simple pour comprendre la <strong>puissance</strong> et les <strong>limitations</strong> de Codex selon le plan.
+    </p>
+
+    <section class="grid">
+      <article class="card">
+        <div class="plan">
+          <h2>Go</h2>
+          <span class="badge">Entrée de gamme</span>
+        </div>
+        <ul>
+          <li>Accès basique aux fonctionnalités Codex.</li>
+          <li>Adapté aux tâches simples : snippets courts, corrections ponctuelles, explications de code.</li>
+          <li>Vitesse et priorité standard.</li>
+        </ul>
+        <div class="kpi">
+          <span class="pill bad">Puissance : Faible à moyenne</span>
+          <span class="pill warn">Contexte : Limité</span>
+          <span class="pill bad">Quota : Restrictif</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="plan">
+          <h2>Plus</h2>
+          <span class="badge">Intermédiaire</span>
+        </div>
+        <ul>
+          <li>Meilleure qualité de génération pour du code plus long et structuré.</li>
+          <li>Bon compromis pour dev solo, side projects et automatisations courantes.</li>
+          <li>Moins de limitations que Go en volume et fréquence.</li>
+        </ul>
+        <div class="kpi">
+          <span class="pill warn">Puissance : Moyenne à élevée</span>
+          <span class="pill warn">Contexte : Moyen</span>
+          <span class="pill ok">Quota : Confortable</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="plan">
+          <h2>Pro</h2>
+          <span class="badge">Avancé</span>
+        </div>
+        <ul>
+          <li>Performance maximale : meilleures réponses sur tâches complexes.</li>
+          <li>Plus adapté aux gros projets, refactoring large, architectures complètes.</li>
+          <li>Priorité d’accès et limites plus élevées.</li>
+        </ul>
+        <div class="kpi">
+          <span class="pill ok">Puissance : Élevée</span>
+          <span class="pill ok">Contexte : Large</span>
+          <span class="pill ok">Quota : Élevé</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <h3>Différence de puissance Codex (clair et direct)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Critère</th>
+            <th>Go</th>
+            <th>Plus</th>
+            <th>Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Complexité de code gérée</td>
+            <td>Simple</td>
+            <td>Moyenne à avancée</td>
+            <td>Avancée / multi-fichiers</td>
+          </tr>
+          <tr>
+            <td>Longueur de contexte</td>
+            <td>Courte</td>
+            <td>Moyenne</td>
+            <td>Longue</td>
+          </tr>
+          <tr>
+            <td>Fiabilité sur gros prompts</td>
+            <td>Variable</td>
+            <td>Bonne</td>
+            <td>Très bonne</td>
+          </tr>
+          <tr>
+            <td>Débit / fréquence d’usage</td>
+            <td>Limitée</td>
+            <td>Confortable</td>
+            <td>Élevée</td>
+          </tr>
+          <tr>
+            <td>Public cible</td>
+            <td>Découverte</td>
+            <td>Usage régulier</td>
+            <td>Usage intensif/pro</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">
+        Les limites exactes (messages, quotas, vitesse, priorité) peuvent évoluer selon l’offre et la période.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Limitations à expliquer aux utilisateurs</h3>
+      <ul>
+        <li><strong>Go :</strong> peut saturer vite sur longues sessions et tâches complexes.</li>
+        <li><strong>Plus :</strong> bon niveau global, mais parfois moins performant que Pro sur gros volumes.</li>
+        <li><strong>Pro :</strong> le plus puissant, mais pas “illimité” : des plafonds et politiques d’usage peuvent toujours exister.</li>
+      </ul>
+    </section>
+
+    <p class="footer">
+      Astuce UX : ajoute un bouton “Choisir ce plan” sous chaque carte pour transformer cette page en landing commerciale.
+    </p>
+  </main>
+</body>
+</html>
